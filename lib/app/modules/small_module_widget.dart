@@ -50,6 +50,9 @@ class SmallModuleWidget extends StatelessWidget {
                       left: 2,
                       child: SvgPicture.asset(module.image,
                           semanticsLabel: 'vector'),
+//                      child: Image(
+//                        image: AssetImage(module.image),
+//                      ),
                     ),
                   ]))),
           Positioned(

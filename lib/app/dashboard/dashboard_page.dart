@@ -23,7 +23,11 @@ class DashboardPage extends StatelessWidget {
 
     return Container(
       padding: EdgeInsets.all(12.0),
-      child: GridView.count(crossAxisCount: 2, children: gridWidgets),
+      child: GridView.count(
+        crossAxisCount: 2,
+        children: gridWidgets,
+        crossAxisSpacing: 4.0,
+      ),
     );
   }
 
