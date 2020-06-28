@@ -50,4 +50,17 @@ class Prefs {
 
     return null;
   }
+
+  setUserDetails(User userDetails) async {
+    // If sharedPrefs not available, load them first.
+    if (!isSharedPrefsAvailable()) {
+      await load();
+    }
+
+    await sharedPrefs.setString(KEY_USER_NAME, userDetails.name);
+    await sharedPrefs.setInt(KEY_USER_AGE, userDetails.age);
+    await sharedPrefs.setString(KEY_USER_GENDER, userDetails.gender);
+
+    loggedUser = userDetails;
+  }
 }
