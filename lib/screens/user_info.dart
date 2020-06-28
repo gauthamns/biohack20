@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:dropdown_formfield/dropdown_formfield.dart';
+import 'package:flutter/material.dart';
 import 'package:hack20/config/prefs.dart';
 import 'package:hack20/data/user.dart';
 
@@ -21,18 +21,19 @@ class _UserFormState extends State<UserForm> {
     myGender = '';
     name = '';
     age = '';
+    Prefs.instance;
   }
 
-  _saveForm() {
+  _saveForm() async {
     var form = formKey.currentState;
     if (form.validate()) {
       form.save();
-      setState(() {
-        user.name = name;
-        user.age = int.parse(age);
-        user.gender = myGender;
-        Prefs.instance.setUserDetails(user);
-      });
+      user.name = name;
+      user.age = int.parse(age);
+      user.gender = myGender;
+      await Prefs.instance.setUserDetails(user);
+//      setState(() {});
+      Navigator.of(context).pop();
     }
   }
 
