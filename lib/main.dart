@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:hack20/app/dashboard/main_page.dart';
 import 'package:hack20/screens/user_info.dart';
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        brightness: Brightness.dark,
       ),
       home: MainPage(),
       //home: MyHomePage(title: 'BioHack!'),
