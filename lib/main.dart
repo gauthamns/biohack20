@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hack20/app/dashboard/dashboard_page.dart';
+import 'package:hack20/app/dashboard/main_page.dart';
 import 'package:hack20/screens/user_info.dart';
 
 void main() {
@@ -8,7 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // Routes.
-  static final String RouteRegister = "registerUser";
+  static final String routeRegister = "registerUser";
 
   // This widget is the root of your application.
   @override
@@ -31,10 +31,10 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: DashboardPage(),
+      home: MainPage(),
       //home: MyHomePage(title: 'BioHack!'),
       routes: <String, WidgetBuilder>{
-        RouteRegister: (BuildContext ctx) => UserForm(),
+        routeRegister: (BuildContext ctx) => UserForm(),
       },
     );
   }
