@@ -2,7 +2,7 @@ import 'package:hack20/data/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Prefs {
-  static final Prefs _instance = Prefs._internal();
+  static final Prefs instance = Prefs._internal();
 
   static const String KEY_USER_NAME = 'userName';
   static const String KEY_USER_AGE = 'userAge';
