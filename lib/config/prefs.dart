@@ -14,6 +14,10 @@ class Prefs {
 
   Prefs._internal();
 
+  static Prefs get instance {
+    return _instance;
+  }
+
   // Load the preferences in the background using async
   // True if you loading happened. Else false if already loaded.
   Future<bool> load() async {
