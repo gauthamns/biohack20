@@ -7,8 +7,8 @@ Map<String, Module> allModules = {
   waterModule.id: waterModule,
 };
 
-Module heartModule = Module(
-    "1", "Heart", "Module to keep the heart healthy", "graphics/heartimg.png");
+Module heartModule = Module("1", "Heart", "Module to keep the heart healthy",
+    "assets/images/heartmodule.svg");
 
 Module waterModule = Module(
     "2", "Water", "Drink water. For water is life", "graphics/water.png");

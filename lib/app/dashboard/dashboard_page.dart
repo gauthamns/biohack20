@@ -22,7 +22,7 @@ class DashboardPage extends StatelessWidget {
     gridWidgets.add(AddModuleButton());
 
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(12.0),
       child: GridView.count(crossAxisCount: 2, children: gridWidgets),
     );
   }
@@ -34,6 +34,9 @@ class DashboardPage extends StatelessWidget {
       subscribedModuleIDs.forEach((moduleID) {
         modules.add(allModules[moduleID]);
       });
+    } else {
+      // For now, let's just add heart rate module.
+      modules.add(heartModule);
     }
 
     return modules;

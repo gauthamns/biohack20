@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class AddModuleButton extends StatelessWidget {
   @override
@@ -45,8 +44,7 @@ class AddModuleButton extends StatelessWidget {
                     Positioned(
                       top: 2,
                       left: 2,
-                      child: SvgPicture.asset('assets/images/addmodule.svg',
-                          semanticsLabel: 'vector'),
+                      child: Icon(Icons.add_circle),
                     ),
                   ]))),
           Positioned(
