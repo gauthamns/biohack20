@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack20/screens/user_info.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'BioHack!'),
+      home: UserForm(),
+      //home: MyHomePage(title: 'BioHack!'),
     );
   }
 }
