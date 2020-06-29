@@ -57,14 +57,6 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
     return dashboardWidget();
   }
 
-  Widget loadingWidget() {
-    return Container(
-      child: Center(
-        child: Text("Loading..."),
-      ),
-    );
-  }
-
   Widget dashboardWidget() {
     return Scaffold(
       appBar: getAppBar(),

@@ -4,6 +4,8 @@ import 'package:hack20/app/dashboard/main_page.dart';
 import 'package:hack20/app/modules/heartrate_detail_page.dart';
 import 'package:hack20/screens/user_info.dart';
 
+import 'app/modules/pills_detail_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
   // Routes.
   static final String routeRegister = "registerUser";
   static final String routeHeartRateDetailed = "heartRateDetailed";
+  static final String routePillsDetailed = "pillsDetailed";
 
   // This widget is the root of your application.
   @override
@@ -41,6 +44,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         routeRegister: (BuildContext ctx) => UserForm(),
         routeHeartRateDetailed: (BuildContext ctx) => HeartrateDetailPage(),
+        routePillsDetailed: (BuildContext ctx) => PillScrn(),
       },
     );
   }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hack20/app/modules/add_module_button.dart';
+import 'package:hack20/app/modules/pill_%20module_widget.dart';
 import 'package:hack20/app/modules/small_heartrate_widget.dart';
 import 'package:hack20/config/prefs.dart';
 import 'package:hack20/data/all_modules.dart';
 import 'package:hack20/data/module.dart';
+import 'package:hack20/main.dart';
 
 import 'main_page.dart';
 
@@ -24,7 +26,7 @@ class DashboardPage extends StatelessWidget {
     List<Widget> gridWidgets = List();
     if (subscribedModules != null) {
       subscribedModules.forEach((Module module) {
-        gridWidgets.add(widgetForModule(module));
+        gridWidgets.add(widgetForModule(module, context));
         // Add to the list.
 //        gridWidgets.add(SmallModuleWidget(module));
       });
@@ -42,9 +44,18 @@ class DashboardPage extends StatelessWidget {
     );
   }
 
-  Widget widgetForModule(Module module) {
+  Widget widgetForModule(Module module, BuildContext context) {
     if (module.id == heartModule.id) {
       return SmallHeartRateWidget(module);
+    }
+
+    if (module.id == pillsModule.id) {
+      return InkWell(
+        child: PillModuleWidget(module),
+        onTap: () {
+          Navigator.pushNamed(context, MyApp.routePillsDetailed);
+        },
+      );
     }
 
     // Let's return for now, heart rate widget again
@@ -58,9 +69,6 @@ class DashboardPage extends StatelessWidget {
       subscribedModuleIDs.forEach((moduleID) {
         modules.add(allModules[moduleID]);
       });
-    } else {
-      // For now, let's just add heart rate module.
-      modules.add(heartModule);
     }
 
     return modules;
