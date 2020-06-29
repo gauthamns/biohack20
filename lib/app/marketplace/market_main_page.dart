@@ -10,6 +10,7 @@ class MarketMainPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          SizedBox(height: 20,),
           Container(
               child: Padding(
             padding: const EdgeInsets.only(top: 20.0),
@@ -135,7 +136,7 @@ class MarketMainPage extends StatelessWidget {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: Alignment.bottomLeft,
+                              alignment: Alignment.center,
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 10.0, bottom: 10.0),

@@ -8,6 +8,8 @@ import 'package:hack20/config/prefs.dart';
 import 'package:hack20/widgets/common/app_bar.dart';
 import 'package:hack20/widgets/common/navigation_icon_view.dart';
 
+import '../../splash_screen.dart';
+
 class MainPage extends StatefulWidget {
   static const int pageMarketplace = 1;
   static const int pageDashboard = 0;
@@ -50,7 +52,8 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     if (isLoading) {
-      return SplashWidget();
+//      return SplashWidget();
+      return Splashscreen();
     }
 
     return dashboardWidget();

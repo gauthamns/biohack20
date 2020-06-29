@@ -14,10 +14,10 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 4,
+      seconds: 2,
       navigateAfterSeconds: new OnBoardingPage(),
       title: Text(
-        "welcome to Biohack",
+        "Welcome to Biohack",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 30,
@@ -30,7 +30,7 @@ class _SplashscreenState extends State<Splashscreen> {
 //        width: 200.0,
 //      ),
       backgroundColor: Colors.yellowAccent[300],
-      photoSize: 220.0,
+//      photoSize: 220.0,
       loaderColor: Colors.red,
     );
   }
@@ -58,27 +58,29 @@ class OnBoardingPage extends StatelessWidget {
     return IntroductionScreen(
       pages: [
         PageViewModel(
-          title: "SOCIAL GOOD",
+          title: "Retro / Cyberpunk Future",
+          image: Image.asset(
+            'assets/images/img2.jpg',
+            fit: BoxFit.scaleDown,
+            width: 60.0,
+          ),
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Expanded(
                   child: Text(
-                      "Social good apps ",
-                      style: bodyStyle)),
+                      "Be it retrofuturism / cyberpunk future on anything beyond human prediction, CHANGE is inevitable.  ",
+                      style: bodyStyle
+                  ),
+              ),
 
             ],
           ),
-          image: Image.asset(
-            'assets/images/img1.jpg',
-//            fit: BoxFit.fill,
-//            width: 60.0,
-          ),
-//          decoration: pageDecoration,
+          decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Get Prepared",
-          body: "polish our brain against of others",
+          title: "Get prepared for biohacking",
+          body: "The world is moving towards biohacking. Our objective is to bridge the gap between wellness and bio-hacking.",
           image: Image.asset(
             'assets/images/img2.jpg',
             fit: BoxFit.scaleDown,
@@ -87,34 +89,34 @@ class OnBoardingPage extends StatelessWidget {
           decoration: pageDecoration,
         ),
         PageViewModel(
-          title: "Learn as you go",
-          body:
-          "Download the biohack app ",
+          title: "Experts",
           image: Image.asset(
-            'assets/images/img3.jpg',
+            'assets/images/img2.jpg',
             fit: BoxFit.scaleDown,
             width: 60.0,
           ),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          title: "there is no limit for learning",
-          body:
-          "In vain have you acquired if you have not imparted it to others",
-          image: Image.network(
-              "https://flutter.io/images/catalog-widget-placeholder.png"),
-          decoration: pageDecoration,
-        ),
-        PageViewModel(
-          title: "experts",
           body:
           "we provide mentorship form industrail experts",
-          image: Image.network(
-              "https://flutter.io/images/catalog-widget-placeholder.png"),
+          decoration: pageDecoration,
+        ),
+        PageViewModel(
+          title: "Marketplace",
+          image: Image.asset(
+            'assets/images/img2.jpg',
+            fit: BoxFit.scaleDown,
+            width: 60.0,
+          ),
+          body:
+          "Business model",
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Lets start exploring",
+          image: Image.asset(
+            'assets/images/img2.jpg',
+            fit: BoxFit.scaleDown,
+            width: 60.0,
+          ),
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
@@ -123,8 +125,6 @@ class OnBoardingPage extends StatelessWidget {
                       style: bodyStyle)),
             ],
           ),
-          image: Image.network(
-              "https://flutter.io/images/catalog-widget-placeholder.png"),
           decoration: pageDecoration,
         ),
       ],

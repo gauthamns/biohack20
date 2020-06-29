@@ -29,10 +29,10 @@ PreferredSizeWidget appBar(
     );
   }
 
-  return AppBar(
-    key: key,
-    title: title,
-    automaticallyImplyLeading: true,
-    backgroundColor: backgroundColor,
-  );
+//  return AppBar(
+//    key: key,
+//    title: title,
+//    automaticallyImplyLeading: true,
+//    backgroundColor: backgroundColor,
+//  );
 }
