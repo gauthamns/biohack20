@@ -19,57 +19,73 @@ class MarketMainPage extends StatelessWidget {
                 aspectRatio: 16 / 9,
               ),
               items: [
-                "Control the work of your heart.Track parameters every day and get important recommendations.",
-                2,
-                3,
-                4,
-                5
+                {
+                  'name': 'Heart',
+                  'image': 'assets/heart.jpg',
+                  'content':
+                      'Control the work of your heart.Track parameters every day and get important recommendations.',
+                },
+                {
+                  'name': 'food',
+                  'image': 'assets/food.jpg',
+                  'content':
+                      'Control the work of your heart.Track parameters every day and get important recommendations.',
+                },
+                {
+                  'name': 'water',
+                  'image': 'assets/water.jpg',
+                  'content':
+                      'Control the work of your heart.Track parameters every day and get important recommendations.',
+                },
               ].map((i) {
                 return Builder(
                   builder: (BuildContext context) {
-                    return Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 5.0),
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/heart.jpg'),
-                              fit: BoxFit.cover),
-                          color: Colors.amber,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Expanded(
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 30.0, top: 30.0),
-                                  child: Text(
-                                    'Heart',
-                                    style: TextStyle(
-                                        fontSize: 16.0, color: Colors.white),
+                    return InkWell(
+                      onTap: () {},
+                      child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('${i["image"]}'),
+                                fit: BoxFit.cover),
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Expanded(
+                                child: Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 30.0, top: 30.0),
+                                    child: Text(
+                                      '${i["name"]}',
+                                      style: TextStyle(
+                                          fontSize: 16.0, color: Colors.white),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Expanded(
-                              child: Align(
-                                alignment: Alignment.bottomLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 30.0, bottom: 30.0),
-                                  child: Text(
-                                    '$i',
-                                    style: TextStyle(
-                                        fontSize: 16.0, color: Colors.white),
+                              Expanded(
+                                child: Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 30.0, bottom: 30.0),
+                                    child: Text(
+                                      '${i["content"]}',
+                                      style: TextStyle(
+                                          fontSize: 16.0, color: Colors.white),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ));
+                            ],
+                          )),
+                    );
                   },
                 );
               }).toList(),
