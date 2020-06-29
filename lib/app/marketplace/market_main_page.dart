@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hack20/app/marketplace/details_page.dart';
 import 'package:hack20/data/all_modules.dart';
 
 class MarketMainPage extends StatelessWidget {
@@ -23,14 +24,17 @@ class MarketMainPage extends StatelessWidget {
                 return Builder(
                   builder: (BuildContext context) {
                     return InkWell(
-                      onTap: () {},
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailsPage(module))),
                       child: Container(
-                          width: MediaQuery.of(context).size.width,
+                          //width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.symmetric(horizontal: 5.0),
                           decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(module.marketPlaceImg),
-                                fit: BoxFit.cover),
+                                fit: BoxFit.fill),
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(20),
                           ),
