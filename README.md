@@ -9,6 +9,12 @@
 +  [Vladimir Tauberk](http://linkedin.com/in/tauberk)
 +  [Fidelis Akilan](https://www.linkedin.com/in/fidelis-akilan-315aa37a/)
 
+# idea
+An app that trains you to bio-hack your body, to improve the quality of living as per your requirements with easy yet rewarding tasks.
+
+## Additional information
+Be it retrofuturism/ cyberpunk future on anything beyond human prediction, CHANGE is inevitable. The world is moving towards biohacking. Our objective is to bridge the gap between wellness and bio-hacking.
+
 ![fluter_file_picker](https://github.com/gauthamns/biohack20/blob/master/figma.png)
 
 
