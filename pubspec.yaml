@@ -47,6 +47,9 @@ flutter:
     - assets/images/addmodule.svg
     - assets/images/heartmodule.svg
     - assets/images/heartratemp.png
+    - assets/images/dashboard.svg
+    - assets/images/marketplace.svg
+    - assets/images/tasks.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

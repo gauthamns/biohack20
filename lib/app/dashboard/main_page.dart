@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hack20/app/dashboard/dashboard_page.dart';
 import 'package:hack20/app/marketplace/market_main_page.dart';
 import 'package:hack20/app/tasks/tasks_main_page.dart';
@@ -79,8 +80,9 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
   }
 
   NavigationIconView dashboardNavigationView() {
-    return new NavigationIconView(
-      icon: const Icon(Icons.dashboard),
+    return NavigationIconView(
+      icon: SvgPicture.asset("assets/images/dashboard.svg",
+          semanticsLabel: 'vector'),
       title: "Dashboard",
       vsync: this,
     );
@@ -88,7 +90,8 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
 
   NavigationIconView marketplaceNavigationView() {
     return new NavigationIconView(
-      icon: const Icon(Icons.collections),
+      icon: SvgPicture.asset("assets/images/marketplace.svg",
+          semanticsLabel: 'vector'),
       title: "Marketplace",
       vsync: this,
     );
@@ -96,7 +99,8 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
 
   NavigationIconView tasksNavigationView() {
     return new NavigationIconView(
-      icon: const Icon(Icons.list),
+      icon:
+          SvgPicture.asset("assets/images/tasks.svg", semanticsLabel: 'vector'),
       title: "Tasks",
       vsync: this,
     );
