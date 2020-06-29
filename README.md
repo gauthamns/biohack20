@@ -9,7 +9,7 @@
 +  [Vladimir Tauberk](http://linkedin.com/in/tauberk)
 +  [Fidelis Akilan](https://www.linkedin.com/in/fidelis-akilan-315aa37a/)
 
-# idea
+# Idea
 An app that trains you to bio-hack your body, to improve the quality of living as per your requirements with easy yet rewarding tasks.
 
 ## Additional information
