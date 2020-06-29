@@ -1,6 +1,6 @@
 
 # #Hack20
-#coding zombies
+#Coding Zombies
 
 ## Team: :busts_in_silhouette:
 
