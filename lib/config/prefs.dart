@@ -7,6 +7,7 @@ class Prefs {
   static const String KEY_USER_NAME = 'userName';
   static const String KEY_USER_AGE = 'userAge';
   static const String KEY_USER_GENDER = 'userGender';
+  static const String KEY_SUBSCRIBED_MODULES = "subscribedModules";
 
   SharedPreferences sharedPrefs;
 
@@ -22,9 +23,13 @@ class Prefs {
   // True if you loading happened. Else false if already loaded.
   Future<bool> load() async {
     if (!isSharedPrefsAvailable()) {
+//      SharedPreferences.setMockInitialValues({});
       sharedPrefs = await SharedPreferences.getInstance();
       loggedUser = loadUserDetails();
+      return true;
     }
+
+    return false;
   }
 
   loadUserDetails() {
@@ -66,5 +71,42 @@ class Prefs {
     await sharedPrefs.setString(KEY_USER_GENDER, userDetails.gender);
 
     loggedUser = userDetails;
+  }
+
+  subscribeToModule(String moduleID) async {
+    List<String> subscribedList =
+        sharedPrefs.getStringList(KEY_SUBSCRIBED_MODULES);
+    if (subscribedList == null) {
+      subscribedList = List();
+    }
+
+    // If available already, nothing to do.
+    if (!subscribedList.contains(moduleID)) {
+      subscribedList.add(moduleID);
+    }
+    await sharedPrefs.setStringList(KEY_SUBSCRIBED_MODULES, subscribedList);
+  }
+
+  unsubscribeToModule(String moduleID) async {
+    List<String> subscribedList =
+        sharedPrefs.getStringList(KEY_SUBSCRIBED_MODULES);
+    subscribedList.removeWhere((y) => y == moduleID);
+    await sharedPrefs.setStringList(KEY_SUBSCRIBED_MODULES, subscribedList);
+  }
+
+  List<String> getSubscribedModules() {
+    List<String> subscribedList =
+        sharedPrefs.getStringList(KEY_SUBSCRIBED_MODULES);
+
+    if (subscribedList == null) {
+      subscribedList = List();
+    }
+
+    return subscribedList;
+  }
+
+  bool isSubscribed(moduleID) {
+    List<String> subscribedList = getSubscribedModules();
+    return subscribedList.contains(moduleID);
   }
 }

@@ -31,7 +31,9 @@ dependencies:
   splashscreen: any
   introduction_screen: any
   shared_preferences: ^0.5.6
-
+  dropdown_formfield: ^0.1.2
+  flutter_svg: ^0.17.4
+  carousel_slider: ^2.2.1
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +44,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - assets/images/addmodule.svg
+    - assets/images/heartmodule.svg
+    - assets/images/heartratemp.png
+    - assets/images/pills.jpeg
+    - assets/images/dashboard.svg
+    - assets/images/pillsmallicon.svg
+    - assets/images/marketplace.svg
+    - assets/images/tasks.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
