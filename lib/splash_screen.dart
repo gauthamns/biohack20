@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+import 'daily_task.dart';
 import 'dashboard.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -23,11 +24,11 @@ class _SplashscreenState extends State<Splashscreen> {
         ),
         textAlign: TextAlign.center,
       ),
-      image: Image.asset(
-        'assets/images/ic_launcher.png',
-        fit: BoxFit.fill,
-        width: 200.0,
-      ),
+//      image: Image.asset(
+//        'assets/images/ic_launcher.png',
+//        fit: BoxFit.fill,
+//        width: 200.0,
+//      ),
       backgroundColor: Colors.yellowAccent[300],
       photoSize: 220.0,
       loaderColor: Colors.red,
@@ -39,7 +40,7 @@ class _SplashscreenState extends State<Splashscreen> {
 class OnBoardingPage extends StatelessWidget {
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => bashboard()),
+      MaterialPageRoute(builder: (_) => dailytask()),
     );
   }
 
