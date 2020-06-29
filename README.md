@@ -20,7 +20,7 @@ Be it retrofuturism/ cyberpunk future on anything beyond human prediction, CHANG
 
 ## Youtube
 
-[![Everything Is AWESOME](https://www.youtube.com/watch?v=LPOr4VjDZRw&feature=youtu.be)](https://www.youtube.com/watch?v=LPOr4VjDZRw&feature=youtu.be-Y "Everything Is AWESOME")
++  [Youtube link](https://www.youtube.com/watch?v=LPOr4VjDZRw&feature=youtu.be)
 
 ### Demo
  <p>
