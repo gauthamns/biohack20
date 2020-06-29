@@ -5,6 +5,7 @@ class Module {
   String name;
   String description;
   String image;
+  String marketPlaceImg;
   bool isComingSoon;
 
   Module(
@@ -12,5 +13,6 @@ class Module {
       @required this.name,
       @required this.description,
       @required this.image,
+      @required this.marketPlaceImg,
       @required this.isComingSoon});
 }

@@ -13,18 +13,21 @@ Module heartModule = Module(
     name: "Heart",
     description: "Module to keep the heart healthy",
     image: "assets/images/heartmodule.svg",
+    marketPlaceImg: "assets/images/heartratemp.png",
     isComingSoon: false);
 
 Module pillsModule = Module(
     id: "2",
     name: "Pills",
     description: "Take your pills, on time.",
-    image: "graphics/water.png",
+    image: "assets/images/heartmodule.svg",
+    marketPlaceImg: "assets/images/heartratemp.png",
     isComingSoon: false);
 
 Module yogaModule = Module(
     id: "3",
     name: "Yoga",
     description: "Yoga for Body, Mind & Soul.",
-    image: "graphics/yoga.png",
+    image: "assets/images/heartmodule.svg",
+    marketPlaceImg: "assets/images/heartratemp.png",
     isComingSoon: true);
