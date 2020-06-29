@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack20/app/modules/add_module_button.dart';
-import 'package:hack20/app/modules/pill_%20module_widget.dart';
+import 'package:hack20/app/modules/pill_module_widget.dart';
 import 'package:hack20/app/modules/small_heartrate_widget.dart';
 import 'package:hack20/config/prefs.dart';
 import 'package:hack20/data/all_modules.dart';

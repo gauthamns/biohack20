@@ -35,7 +35,6 @@ class MarketMainPage extends StatelessWidget {
                             image: DecorationImage(
                                 image: AssetImage(module.marketPlaceImg),
                                 fit: BoxFit.fill),
-                            color: Colors.amber,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
