@@ -8,6 +8,10 @@ import 'package:hack20/widgets/common/app_bar.dart';
 import 'package:hack20/widgets/common/navigation_icon_view.dart';
 
 class MainPage extends StatefulWidget {
+  static const int pageMarketplace = 1;
+  static const int pageDashboard = 0;
+  static const int pageTasks = 2;
+
   _State createState() => _State();
 }
 
@@ -124,12 +128,17 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
 
   Widget getBodyWidget() {
     switch (_currentIndex) {
-      case 1:
+      case MainPage.pageMarketplace:
         return MarketMainPage();
-      case 2:
+      case MainPage.pageTasks:
         return TasksMainPage();
       default:
-        return DashboardPage();
+        return DashboardPage(setCurrentIndex);
     }
+  }
+
+  void setCurrentIndex(int index) {
+    _currentIndex = index;
+    updateState();
   }
 }

@@ -4,11 +4,27 @@ import 'module.dart';
 
 Map<String, Module> allModules = {
   heartModule.id: heartModule,
-  waterModule.id: waterModule,
+  pillsModule.id: pillsModule,
+  yogaModule.id: yogaModule,
 };
 
-Module heartModule = Module("1", "Heart", "Module to keep the heart healthy",
-    "assets/images/heartmodule.svg");
+Module heartModule = Module(
+    id: "1",
+    name: "Heart",
+    description: "Module to keep the heart healthy",
+    image: "assets/images/heartmodule.svg",
+    isComingSoon: false);
 
-Module waterModule = Module(
-    "2", "Water", "Drink water. For water is life", "graphics/water.png");
+Module pillsModule = Module(
+    id: "2",
+    name: "Pills",
+    description: "Take your pills, on time.",
+    image: "graphics/water.png",
+    isComingSoon: false);
+
+Module yogaModule = Module(
+    id: "3",
+    name: "Yoga",
+    description: "Yoga for Body, Mind & Soul.",
+    image: "graphics/yoga.png",
+    isComingSoon: true);

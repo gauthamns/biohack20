@@ -41,9 +41,9 @@ class SmallModuleWidget extends StatelessWidget {
               child: Container(
                   width: 24,
                   height: 24,
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                  ),
+//                  decoration: BoxDecoration(
+//                    color: Color.fromRGBO(255, 255, 255, 1),
+//                  ),
                   child: Stack(children: <Widget>[
                     Positioned(
                       top: 3,

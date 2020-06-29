@@ -6,6 +6,10 @@ import 'package:hack20/data/all_modules.dart';
 import 'package:hack20/data/module.dart';
 
 class DashboardPage extends StatelessWidget {
+  final Function setCurrentIndex;
+
+  DashboardPage(this.setCurrentIndex);
+
   @override
   Widget build(BuildContext context) {
     // Get all the modules user has subscribed to.
@@ -19,7 +23,7 @@ class DashboardPage extends StatelessWidget {
       });
     }
 
-    gridWidgets.add(AddModuleButton());
+    gridWidgets.add(AddModuleButton(setCurrentIndex));
 
     return Container(
       padding: EdgeInsets.all(12.0),
