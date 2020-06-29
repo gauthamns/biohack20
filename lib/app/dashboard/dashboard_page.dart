@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack20/app/modules/add_module_button.dart';
-import 'package:hack20/app/modules/small_module_widget.dart';
+import 'package:hack20/app/modules/small_heartrate_widget.dart';
 import 'package:hack20/config/prefs.dart';
 import 'package:hack20/data/all_modules.dart';
 import 'package:hack20/data/module.dart';
@@ -18,8 +18,9 @@ class DashboardPage extends StatelessWidget {
     List<Widget> gridWidgets = List();
     if (subscribedModules != null) {
       subscribedModules.forEach((Module module) {
+        gridWidgets.add(widgetForModule(module));
         // Add to the list.
-        gridWidgets.add(SmallModuleWidget(module));
+//        gridWidgets.add(SmallModuleWidget(module));
       });
     }
 
@@ -33,6 +34,15 @@ class DashboardPage extends StatelessWidget {
         crossAxisSpacing: 4.0,
       ),
     );
+  }
+
+  Widget widgetForModule(Module module) {
+    if (module.id == heartModule.id) {
+      return SmallHeartRateWidget(module);
+    }
+
+    // Let's return for now, heart rate widget again
+    return SmallHeartRateWidget(module);
   }
 
   List<Module> getSubscribedModules() {

@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hack20/data/module.dart';
 
-class SmallModuleWidget extends StatelessWidget {
+class SmallHeartRateWidget extends StatelessWidget {
   final Module module;
-  SmallModuleWidget(this.module);
+  SmallHeartRateWidget(this.module);
 
   @override
   Widget build(BuildContext context) {
