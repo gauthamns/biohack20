@@ -21,7 +21,7 @@ Module pillsModule = Module(
     name: "Pills",
     description: "Take your pills, on time.",
     image: "assets/images/heartmodule.svg",
-    marketPlaceImg: "assets/images/heartratemp.png",
+    marketPlaceImg: "assets/images/pills.jpeg",
     isComingSoon: false);
 
 Module yogaModule = Module(

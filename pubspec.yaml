@@ -48,7 +48,9 @@ flutter:
     - assets/images/addmodule.svg
     - assets/images/heartmodule.svg
     - assets/images/heartratemp.png
+    - assets/images/pills.jpeg
     - assets/images/dashboard.svg
+    - assets/images/pillsmallicon.svg
     - assets/images/marketplace.svg
     - assets/images/tasks.svg
 

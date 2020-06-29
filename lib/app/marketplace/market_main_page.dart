@@ -35,7 +35,7 @@ class MarketMainPage extends StatelessWidget {
                             image: DecorationImage(
                                 image: AssetImage(module.marketPlaceImg),
                                 fit: BoxFit.fill),
-                            color: Colors.amber,
+                            color: Colors.transparent,
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Column(
@@ -114,7 +114,7 @@ class MarketMainPage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                       decoration: BoxDecoration(
-                        color: Colors.amber,
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Column(

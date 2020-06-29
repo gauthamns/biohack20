@@ -5,7 +5,6 @@ import 'package:hack20/app/dashboard/splash_widget.dart';
 import 'package:hack20/app/marketplace/market_main_page.dart';
 import 'package:hack20/app/tasks/tasks_main_page.dart';
 import 'package:hack20/config/prefs.dart';
-import 'package:hack20/main.dart';
 import 'package:hack20/widgets/common/app_bar.dart';
 import 'package:hack20/widgets/common/navigation_icon_view.dart';
 
@@ -35,9 +34,9 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
     await prefs.load();
 
     // Now, if user is not signed in, go to introduction page.
-    if (!prefs.isUserSignedIn()) {
-      Navigator.of(context).pushNamed(MyApp.routeRegister);
-    }
+//    if (!prefs.isUserSignedIn()) {
+//      Navigator.of(context).pushNamed(MyApp.routeRegister);
+//    }
 
     // initial loading is done. Let's get to the main action
     isLoading = false;
