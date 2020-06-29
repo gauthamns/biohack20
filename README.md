@@ -3,7 +3,7 @@
 
 ### Demo
  <p>
-     <img src="https://github.com/suryadevsingh/CircularDateTimePicker/blob/master/demmo.gif?raw=true"/>
+     <img src="https://github.com/gauthamns/biohack20/blob/master/biohack1.gif?raw=true"/>
  
  </p>
 
