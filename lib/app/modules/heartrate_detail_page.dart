@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack20/app/modules/rate_module_widget.dart';
 import 'package:hack20/widgets/common/app_bar.dart';
 
 class HeartrateDetailPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class HeartrateDetailPage extends StatelessWidget {
 
   PreferredSizeWidget getAppBar() {
     return appBar(
-      title: Text(""),
+      title: Text("Heartrate"),
     );
   }
 
@@ -23,7 +24,7 @@ class HeartrateDetailPage extends StatelessWidget {
   List<Widget> listItems() {
     List<Widget> items = List();
 
-    items.add(headerRow());
+    items.add(RatemoduleWidget());
 
     return items;
   }
