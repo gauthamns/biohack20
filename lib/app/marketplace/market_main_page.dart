@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hack20/app/marketplace/details_page.dart';
+import 'package:hack20/app/module_screen/pill_screen.dart';
 import 'package:hack20/data/all_modules.dart';
 
 class MarketMainPage extends StatelessWidget {
@@ -27,7 +28,8 @@ class MarketMainPage extends StatelessWidget {
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => DetailsPage(module))),
+                              // builder: (context) => DetailsPage(module))),
+                              builder: (context) => PillScrn())),
                       child: Container(
                           //width: MediaQuery.of(context).size.width,
                           margin: EdgeInsets.symmetric(horizontal: 5.0),
