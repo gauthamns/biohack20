@@ -76,7 +76,14 @@ class Prefs {
   subscribeToModule(String moduleID) async {
     List<String> subscribedList =
         sharedPrefs.getStringList(KEY_SUBSCRIBED_MODULES);
-    subscribedList.add(moduleID);
+    if (subscribedList == null) {
+      subscribedList = List();
+    }
+
+    // If available already, nothing to do.
+    if (!subscribedList.contains(moduleID)) {
+      subscribedList.add(moduleID);
+    }
     await sharedPrefs.setStringList(KEY_SUBSCRIBED_MODULES, subscribedList);
   }
 
@@ -88,6 +95,18 @@ class Prefs {
   }
 
   List<String> getSubscribedModules() {
-    return sharedPrefs.getStringList(KEY_SUBSCRIBED_MODULES);
+    List<String> subscribedList =
+        sharedPrefs.getStringList(KEY_SUBSCRIBED_MODULES);
+
+    if (subscribedList == null) {
+      subscribedList = List();
+    }
+
+    return subscribedList;
+  }
+
+  bool isSubscribed(moduleID) {
+    List<String> subscribedList = getSubscribedModules();
+    return subscribedList.contains(moduleID);
   }
 }

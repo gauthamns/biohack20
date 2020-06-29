@@ -1,6 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hack20/app/dashboard/main_page.dart';
-import 'package:hack20/app/modules/add_module_button.dart';
+import 'package:hack20/config/prefs.dart';
 import 'package:hack20/data/module.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -61,9 +61,43 @@ class DetailsPage extends StatelessWidget {
               ),
             ),
           ),
+          CupertinoButton(
+            child: Text(actionText(),
+                style: TextStyle(
+                  color: Color.fromRGBO(30, 234, 234, 1),
+                )),
+            onPressed: getOnPressed(context),
+          ),
           //  AddModuleButton(MainPage.pageDashboard);
         ],
       ),
     );
+  }
+
+  getOnPressed(BuildContext context) {
+    if (module.isComingSoon) {
+      return null;
+    }
+
+    return () {
+      if (Prefs.instance.isSubscribed(module.id)) {
+        Prefs.instance.unsubscribeToModule(module.id);
+      } else {
+        Prefs.instance.subscribeToModule(module.id);
+      }
+      Navigator.of(context).pop();
+    };
+  }
+
+  String actionText() {
+    if (Prefs.instance.isSubscribed(module.id)) {
+      return "Remove module";
+    }
+
+    if (!module.isComingSoon) {
+      return "Add module";
+    }
+
+    return "Coming Soon";
   }
 }

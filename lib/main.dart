@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hack20/app/dashboard/main_page.dart';
+import 'package:hack20/app/modules/heartrate_detail_page.dart';
 import 'package:hack20/screens/user_info.dart';
 
 void main() {
@@ -10,6 +11,7 @@ void main() {
 class MyApp extends StatelessWidget {
   // Routes.
   static final String routeRegister = "registerUser";
+  static final String routeHeartRateDetailed = "heartRateDetailed";
 
   // This widget is the root of your application.
   @override
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
       //home: MyHomePage(title: 'BioHack!'),
       routes: <String, WidgetBuilder>{
         routeRegister: (BuildContext ctx) => UserForm(),
+        routeHeartRateDetailed: (BuildContext ctx) => HeartrateDetailPage(),
       },
     );
   }

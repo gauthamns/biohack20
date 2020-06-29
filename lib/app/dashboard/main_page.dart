@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hack20/app/dashboard/dashboard_page.dart';
+import 'package:hack20/app/dashboard/splash_widget.dart';
 import 'package:hack20/app/marketplace/market_main_page.dart';
 import 'package:hack20/app/tasks/tasks_main_page.dart';
 import 'package:hack20/config/prefs.dart';
 import 'package:hack20/main.dart';
 import 'package:hack20/widgets/common/app_bar.dart';
 import 'package:hack20/widgets/common/navigation_icon_view.dart';
-
-import '../../splash_screen.dart';
 
 class MainPage extends StatefulWidget {
   static const int pageMarketplace = 1;
@@ -52,7 +51,7 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     if (isLoading) {
-      return Splashscreen();
+      return SplashWidget();
     }
 
     return dashboardWidget();
@@ -128,8 +127,19 @@ class _State extends State<MainPage> with TickerProviderStateMixin {
 
   PreferredSizeWidget getAppBar() {
     return appBar(
-      title: Text("Dashboard"),
+      title: Text(titleForPage()),
     );
+  }
+
+  String titleForPage() {
+    switch (_currentIndex) {
+      case MainPage.pageMarketplace:
+        return "Add module";
+      case MainPage.pageTasks:
+        return "Tasks";
+    }
+
+    return "Dashboard";
   }
 
   Widget getBodyWidget() {

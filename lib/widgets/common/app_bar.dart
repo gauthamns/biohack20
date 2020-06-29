@@ -13,6 +13,7 @@ PreferredSizeWidget appBar(
   if (DeviceType.isIOS) {
     return new CupertinoNavigationBar(
         backgroundColor: backgroundColor,
+        automaticallyImplyLeading: true,
         key: key,
         leading: leading,
         middle: title,
@@ -21,6 +22,7 @@ PreferredSizeWidget appBar(
   if (action != null) {
     return AppBar(
       key: key,
+      automaticallyImplyLeading: true,
       title: title,
       backgroundColor: backgroundColor,
       actions: <Widget>[action],
@@ -30,6 +32,7 @@ PreferredSizeWidget appBar(
   return AppBar(
     key: key,
     title: title,
+    automaticallyImplyLeading: true,
     backgroundColor: backgroundColor,
   );
 }
